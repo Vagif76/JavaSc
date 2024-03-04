@@ -1,39 +1,4 @@
 
-
-const telebeler = [
-
- {
-    ad: "Vaqif",
-    soyad: "Ehmedov",
-    tevellud: 1976,
-    isStudendt: true,
-    telebeninYashiniHesabla: function() {
-        return new Date().getFullYear() - this.tevellud
-    }
-},  
-
-{
-    ad: "Meherrem",
-    soyad: "Dadashov",
-    tevellud: 2004,
-    isStudendt: true,
-    telebeninYashiniHesabla: function() {
-        return new Date().getFullYear() - this.tevellud
-    }
-},
-
-{
-    ad: "Murad",
-    soyad: "Ismayilov",
-    tevellud: 2008,
-    isStudendt: false,
-    telebeninYashiniHesabla: function() {
-        return new Date().getFullYear() - this.tevellud
-    }
-}
-
-]
-
 // console.log(telebeler[0].ad, telebeler [0].soyad, telebeler[0].isStudendt)
 // console.log(telebeler[1].ad, telebeler [1].soyad, telebeler[1].isStudendt)
 // console.log(telebeler[2].ad, telebeler [2].soyad, telebeler[2].isStudendt)
@@ -42,8 +7,43 @@ const telebeler = [
 // console.log(i++)
 // console.log(i++)
 
-const tbody = document.querySelector("tbody")
+// const tbody = document.querySelector("tbody")
+
+const telebeler = [
+    {
+        soyad: "Əhmədov",
+        ad: "Vaqif",
+        ataAdi: "Məhəmmədəli",
+        tevellud: 1976,
+        telebeStatusu: true,
+        yashHesabla: function() {
+            return new Date().getFullYear() - this.tevellud
+        }
+    },
+
+    {
+        soyad: "Dadaşov",
+        ad: "Məhərrəm",
+        ataAdi: "",
+        tevellud: 2004,
+        telebeStatusu: true,
+        yashHesabla: function() {
+            return new Date().getFullYear() - this.tevellud
+        }
+    },
+
+    {
+        soyad: "İsmayılov",
+        ad: "Murad",
+        ataAdi: "",
+        tevellud: 2008,
+        telebeStatusu: false,
+        yashHesabla: function() {
+            return new Date().getFullYear() - this.tevellud
+        }
+    }
+]
 
 for(let i=0; i<telebeler.length; i++) {
-    console.log(telebeler[i].ad)
+    console.log(telebeler[i].soyad, telebeler[i].ad, telebeler[i].ataAdi, telebeler[i].tevellud, telebeler[i].telebeStatusu, telebeler[i].yashHesabla)
 }
